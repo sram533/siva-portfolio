@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;background:#070b14;color:#e9edf6;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 a.link{color:#5fd3e6}
@@ -44,7 +44,7 @@ button{font:inherit}
 .btn-ghost{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13);color:#e9edf6}
 .btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22)}
 .btn-sm{padding:9px 15px;font-size:13.5px;border-radius:10px}
-.chip{font-family:'JetBrains Mono';font-size:12px;padding:5px 11px;border-radius:8px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);color:#c3cde0;white-space:nowrap}
+.chip{font-family:'JetBrains Mono';font-size:12px;padding:5px 11px;border-radius:8px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);color:#c3cde0;white-space:nowrap;max-width:100%}
 .chiprow{display:flex;flex-wrap:wrap;gap:8px}
 .hero{position:relative;padding:150px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .badge-pill{display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:12.5px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#c3cde0}
@@ -205,14 +205,110 @@ button{font:inherit}
   .nav-links{display:none}
 }
 @media(max-width:640px){
-  .wrap{padding:0 18px}
-  .section{padding:70px 0}
+  body{font-size:15px}
+  .wrap{padding:0 16px}
+  .section{padding:64px 0;scroll-margin-top:70px}
+  .glass{border-radius:14px}
+  .nav-in{padding:11px 16px;gap:10px}
+  .brand{gap:9px;font-size:14px;min-width:0}
+  .brand .dim{display:none}
+  .brand-mark{width:32px;height:32px;border-radius:8px;font-size:13px;flex:0 0 auto}
+  .nav-cta{gap:8px}
+  .nav-cta .btn-primary{width:auto;min-height:38px;padding:8px 12px;font-size:0;border-radius:9px}
+  .nav-cta .btn-primary::after{content:"Contact";font-size:13px}
+  .btn{width:100%;min-height:44px;padding:10px 14px;font-size:14px;white-space:normal;text-align:center}
+  .btn-sm{min-height:40px;padding:8px 12px;font-size:13px}
+  .hero{padding-top:106px;padding-bottom:46px;gap:26px}
+  .badge-pill{width:100%;align-items:flex-start;border-radius:12px;font-size:11.5px;line-height:1.45;white-space:normal}
+  .dot{margin-top:4px;flex:0 0 auto}
+  .hero-name{font-size:clamp(34px,11.6vw,46px);margin-top:18px;line-height:1.04}
+  .hero-head{font-size:20px;line-height:1.25;margin-top:14px}
+  .hero-sub,.sec-sub,.lead{font-size:15.5px}
+  .body-copy{font-size:15px}
+  .hero-cta{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;margin-top:28px}
+  .stat-n{font-size:23px}
+  .stat-l{font-size:12px}
+  .diagram{padding:14px;border-radius:16px}
+  .diag-head{align-items:flex-start;gap:12px;margin-bottom:12px;padding-bottom:12px}
+  .diag-title{font-size:10.5px;overflow-wrap:anywhere}
+  .ws{gap:9px;animation:none}
+  .ws-panel{padding:11px 12px}
+  .ws-cap{font-size:8.5px;gap:8px;letter-spacing:.12em}
+  .ws-tree{font-size:10px;line-height:1.65;overflow-wrap:anywhere}
+  .api-row{font-size:10px;gap:7px}
+  .mth{width:32px}
+  .api-code{font-size:8.5px;padding:2px 5px}
+  .ws-b{font-size:9.5px;padding:4px 7px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;gap:8px}
+  .eyebrow::before{width:18px}
+  .sec-title{font-size:clamp(28px,8.5vw,34px);margin-top:12px}
+  .two{gap:16px;margin-top:30px}
+  .info-card,.focus-card,.skill-cat,.edu-card,.cert,.res-card{padding:18px}
   .proj-grid,.skill-grid,.cert-grid,.focus-grid{grid-template-columns:1fr}
   .proj-feat{grid-column:span 1}
+  .focus-grid,.proj-grid,.pat-grid,.skill-grid,.edu-grid,.cert-grid{gap:14px;margin-top:30px}
   .nav-cta .desk{display:none}
-  .hero-stats{gap:22px}
+  .chip{white-space:normal;overflow-wrap:anywhere;font-size:11px;padding:5px 9px}
+  .chiprow{gap:7px}
+  .proj-card{border-radius:14px}
+  .mock{height:162px}
+  .mock-pad{padding:12px}
+  .mock-pad .grid{grid-template-columns:1fr 1fr!important}
+  .mock-pad .chip{font-size:10px}
+  .mk-tile{padding:8px}
+  .mk-kpi{font-size:16px}
+  .mk-kl{font-size:8.5px}
+  .term{font-size:9.5px;line-height:1.6;overflow-wrap:anywhere}
+  .msg{font-size:10px;padding:7px 9px}
+  .proj-body{padding:18px}
+  .proj-cat{font-size:10px;letter-spacing:.08em;line-height:1.5}
+  .proj-title{font-size:19px;line-height:1.18}
+  .proj-desc{font-size:14px}
+  .proj-foot{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px;padding-top:16px}
+  .status{top:10px;right:10px;font-size:10px;padding:4px 8px}
+  .pat-card{padding:18px}
+  .pat-t{font-size:17px}
+  .pat-flow{align-items:flex-start}
+  .pat-node{white-space:normal;overflow-wrap:anywhere;font-size:11px;padding:7px 10px}
+  .pat-arrow{display:none}
+  .timeline{margin-top:30px}
+  .tl-item{padding-left:24px;padding-bottom:24px}
+  .tl-item::before{left:7px}
+  .tl-dot{left:0;width:14px;height:14px}
+  .tl-card{padding:18px}
+  .tl-role{font-size:17px;line-height:1.25}
+  .tl-focus{font-size:12px;overflow-wrap:anywhere}
+  .tl-date{font-size:11.5px}
+  .feat-list li,.mb-list li,.snap-list li{font-size:13.5px}
+  .skill-h{align-items:flex-start}
+  .skill-name{font-size:14.5px;line-height:1.25}
   .course-grid{grid-template-columns:1fr}
+  .resume-snap{padding:20px;gap:24px}
+  .roles-tags{gap:7px}
+  .snap-logo{width:58px;height:58px;border-radius:15px;font-size:19px}
+  .ct-head{padding:12px 14px}
+  .ct-body{padding:18px 16px;font-size:11.5px;line-height:1.8}
+  .contact-cta{display:grid;grid-template-columns:1fr;gap:10px}
+  .beyond-grid{gap:8px}
+  .beyond-chip{width:100%;padding:9px 12px;font-size:13.5px}
+  .foot-in{flex-direction:column;align-items:flex-start;gap:12px}
+  .footer{padding:34px 0}
+  .overlay{padding:14px;align-items:stretch}
+  .modal{max-height:calc(100vh - 28px);overflow:auto;border-radius:16px}
+  .modal-close{top:14px;right:14px;width:34px;height:34px;border-radius:9px}
   .modal-head,.modal-body{padding-left:22px;padding-right:22px}
+  .modal-head{padding-top:62px;padding-bottom:20px}
+  .modal-body{padding-top:22px;padding-bottom:28px}
+  #modal-title{font-size:22px!important;line-height:1.15}
+}
+@media(max-width:390px){
+  .wrap{padding:0 14px}
+  .hero-name{font-size:32px}
+  .hero-stats{grid-template-columns:1fr}
+  .diag-head .tdots{display:none}
+  .mock{height:150px}
+  .cert-grid{gap:12px}
 }
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1!important;transform:none!important;transition:none!important}
