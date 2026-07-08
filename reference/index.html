@@ -15,9 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
 
-    <!-- Import map lets us `import ... from 'three'` in app.js -->
+    <!-- Import map lets us `import ... from 'three'` in main.js -->
     <script type="importmap">
       {
         "imports": {
@@ -138,6 +138,15 @@
 
           <div class="hero-right">
             <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="status-panel">
+              <div class="panel-title">system · live</div>
+              <div class="panel-grid">
+                <span class="k">build</span><span class="v ok">passing</span>
+                <span class="k">tests</span><span class="v">42 / 42</span>
+                <span class="k">deploy</span><span class="v ok">successful</span>
+                <span class="k">ai workflow</span><span class="v accent">ready</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -180,6 +189,15 @@
                   high-performance computing, and healthcare technology.
                 </p>
               </div>
+              <dl class="spec-list reveal">
+                <div><dt>Location</dt><dd>Chicago, IL · Remote</dd></div>
+                <div><dt>Degree</dt><dd>MS CS — UIC (Dec 2025)</dd></div>
+                <div><dt>Prior</dt><dd>Software Engineer, Deloitte</dd></div>
+                <div><dt>Stack</dt><dd>TS · React · Node · Nest · FastAPI</dd></div>
+                <div><dt>Data</dt><dd>Postgres · MongoDB · Redis</dd></div>
+                <div><dt>AI</dt><dd>LLM tool-calling · Agents · RAG</dd></div>
+                <div><dt>Platform</dt><dd>Salesforce · Apex · LWC · SFDX</dd></div>
+              </dl>
             </div>
           </div>
         </div>
@@ -463,13 +481,6 @@
       </div>
     </footer>
 
-    <div class="case-modal" id="case-modal" hidden>
-      <div class="case-dialog" role="dialog" aria-modal="true" aria-labelledby="case-title">
-        <button class="case-close" id="case-close" type="button" aria-label="Close case study">x</button>
-        <div class="case-body" id="case-body"></div>
-      </div>
-    </div>
-
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@ const PROJECTS = [
     stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "LLM Tool Calling"],
     highlights: ["AI-generated, goal-aware training recommendations", "Workout, nutrition, and progression tracking", "Analytics dashboards from structured data"],
     arch: ["UI", "API", "SVC", "DB", "AI"],
-    metrics: [["48", "workouts"], ["1.8k", "kcal/day"], ["92%", "goal"], ["5", "core modules"], ["3", "data domains"], ["AI", "recommendations"]],
+    metrics: [["48", "workouts"], ["1.8k", "kcal/day"], ["92%", "goal"]],
     buttons: [["Case Study", "case"], ["Demo Coming Soon", "muted"]],
   },
   {
@@ -40,7 +40,7 @@ const PROJECTS = [
     stack: ["Next.js", "NestJS", "MongoDB", "REST APIs", "TypeScript"],
     highlights: ["User-facing healthcare workflows", "API-driven, modular backend architecture", "Authentication-ready, database-backed records"],
     arch: ["Next", "Nest", "SVC", "Mongo"],
-    metrics: [["1,204", "members"], ["318", "claims"], ["96", "policies"], ["4", "API services"], ["3", "workflows"], ["RBAC", "ready"]],
+    metrics: [["1,204", "members"], ["318", "claims"], ["96", "policies"]],
     buttons: [["Case Study", "case"], ["Private Repo", "muted"]],
   },
   {
@@ -50,7 +50,7 @@ const PROJECTS = [
     stack: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
     highlights: ["Real-time WebSocket messaging", "Chat rooms and direct messaging", "Authentication-ready structure"],
     arch: ["React", "Expr", "WS", "Mongo"],
-    metrics: [["3", "online"], ["<40ms", "latency"], ["MERN", "stack"], ["WS", "transport"], ["rooms", "chat model"], ["Mongo", "persistence"]],
+    metrics: [["3", "online"], ["<40ms", "latency"], ["MERN", "stack"]],
     buttons: [["Case Study", "case"], ["GitHub", "link", "https://github.com/sram533/realmtalk"]],
   },
   {
@@ -60,7 +60,7 @@ const PROJECTS = [
     stack: ["Apex", "LWC", "Flows", "SFDX", "REST / SOAP", "CI/CD"],
     highlights: ["Reusable Apex service logic and LWC UI", "Configurable Flow automation", "Decoupled API / middleware integrations"],
     arch: ["LWC", "Apex", "Data", "R/S"],
-    metrics: [["20+", "releases"], ["10M+", "records"], ["89%", "coverage"], ["Apex", "services"], ["LWC", "UI layer"], ["SFDX", "deploys"]],
+    metrics: [["20+", "releases"], ["10M+", "records"], ["89%", "cov"]],
     buttons: [["Case Study", "case"], ["Private Repo", "muted"]],
   },
   {
@@ -70,7 +70,7 @@ const PROJECTS = [
     stack: ["C++", "OpenMP", "MPI", "PBS", "Linux", "HPC"],
     highlights: ["Parallelized Monte Carlo pi estimation", "Strong scaling and speedup analysis", "Hybrid heat diffusion simulation"],
     arch: ["MPI", "OMP", "PBS", "HPC"],
-    metrics: [["13.8x", "speedup"], ["86%", "efficiency"], ["16", "ranks"], ["MPI", "distributed"], ["OpenMP", "shared mem"], ["PBS", "cluster jobs"]],
+    metrics: [["13.8x", "speedup"], ["86%", "eff"], ["16", "ranks"]],
     buttons: [["Case Study", "case"], ["Academic", "muted"]],
   },
   {
@@ -80,7 +80,7 @@ const PROJECTS = [
     stack: ["Python", "Reinforcement Learning", "PPO", "Action Masks"],
     highlights: ["PPO-based optimization experiments", "Action masking for valid decision paths", "Rule-set and decision-tree optimization"],
     arch: ["State", "Pol", "Env", "Tree"],
-    metrics: [["PPO", "algorithm"], ["mask", "actions"], ["5-tup", "packets"], ["Tree", "policy output"], ["bench", "evaluation"], ["RL", "optimizer"]],
+    metrics: [["PPO", "algo"], ["mask", "action"], ["5-tup", "packets"]],
     buttons: [["Case Study", "case"], ["In Progress", "muted"]],
   },
 ];
@@ -128,16 +128,16 @@ const EXPERIENCE = [
 ];
 
 const SKILLS = [
-  ["code", "Programming Languages", ["JavaScript", "TypeScript", "Java", "Python", "C++", "SQL", "Apex"]],
-  ["layout", "Frontend Engineering", ["React", "Next.js", "Lightning Web Components", "Tailwind CSS", "Recharts", "Responsive UI", "HTML", "CSS"]],
-  ["server", "Backend & APIs", ["Node.js", "Express.js", "NestJS", "Spring Boot", "FastAPI", "REST APIs", "SOAP APIs", "Microservices", "RBAC"]],
-  ["database", "Databases & Data Modeling", ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "SOQL", "SOSL", "Data Modeling", "Query Optimization"]],
-  ["spark", "AI Applications", ["LLM Tool Calling", "LangGraph.js", "Structured Outputs", "Agent Workflows", "RAG", "Prompt Engineering", "AI Evaluation"]],
-  ["nodes", "Architecture & System Design", ["Layered Architecture", "Service Layer", "API Design", "Event-Driven", "iPaaS Layer", "Middleware Patterns", "Error Handling", "Logging"]],
-  ["cloud", "Cloud / DevOps / CI-CD", ["Git", "GitHub", "Bitbucket", "SFDX", "CI/CD Pipelines", "Environment Promotion", "Docker Basics", "Linux", "Postman", "Jira"]],
-  ["bolt", "Salesforce Platform Engineering", ["Health Cloud", "Sales Cloud", "Service Cloud", "Apex", "LWC", "Flows", "Reports & Dashboards", "Data Loader", "SFDX"]],
-  ["plug", "Integrations / iPaaS", ["REST APIs", "SOAP APIs", "Data Mapping", "Middleware Flows", "Retry Patterns", "Error Handling", "API Contracts", "External System Sync"]],
-  ["cpu", "CS Fundamentals", ["Data Structures & Algorithms", "Computer Networks", "Distributed Systems", "High Performance Computing", "OpenMP", "MPI", "OS Concepts"]],
+  ["Programming Languages", ["JavaScript", "TypeScript", "Java", "Python", "C++", "SQL", "Apex"]],
+  ["Frontend Engineering", ["React", "Next.js", "Lightning Web Components", "Tailwind CSS", "Recharts", "Responsive UI", "HTML", "CSS"]],
+  ["Backend & APIs", ["Node.js", "Express.js", "NestJS", "Spring Boot", "FastAPI", "REST APIs", "SOAP APIs", "Microservices", "RBAC"]],
+  ["Databases & Data Modeling", ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "SOQL", "SOSL", "Data Modeling", "Query Optimization"]],
+  ["AI Applications", ["LLM Tool Calling", "LangGraph.js", "Structured Outputs", "Agent Workflows", "RAG", "Prompt Engineering", "AI Evaluation"]],
+  ["Architecture & System Design", ["Layered Architecture", "Service Layer", "API Design", "Event-Driven", "iPaaS Layer", "Middleware Patterns", "Error Handling", "Logging"]],
+  ["Cloud / DevOps / CI-CD", ["Git", "GitHub", "Bitbucket", "SFDX", "CI/CD Pipelines", "Environment Promotion", "Docker Basics", "Linux", "Postman", "Jira"]],
+  ["Salesforce Platform Engineering", ["Health Cloud", "Sales Cloud", "Service Cloud", "Apex", "LWC", "Flows", "Reports & Dashboards", "Data Loader", "SFDX"]],
+  ["Integrations / iPaaS", ["REST APIs", "SOAP APIs", "Data Mapping", "Middleware Flows", "Retry Patterns", "Error Handling", "API Contracts", "External System Sync"]],
+  ["CS Fundamentals", ["Data Structures & Algorithms", "Computer Networks", "Distributed Systems", "High Performance Computing", "OpenMP", "MPI", "OS Concepts"]],
 ];
 
 const EDUCATION = [
@@ -182,21 +182,6 @@ const h = (tag, attrs = {}, ...children) => {
   return el;
 };
 const chip = (t) => h("span", { class: "chip" }, t);
-const icon = (name) => {
-  const paths = {
-    code: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>',
-    layout: '<rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path>',
-    server: '<rect x="3" y="4" width="18" height="6" rx="2"></rect><rect x="3" y="14" width="18" height="6" rx="2"></rect><path d="M7 7h.01"></path><path d="M7 17h.01"></path>',
-    database: '<ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path>',
-    spark: '<path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path><path d="M19 15l.8 2.7L22 18.5l-2.2.8L19 22l-.8-2.7-2.2-.8 2.2-.8L19 15z"></path>',
-    nodes: '<circle cx="6" cy="7" r="3"></circle><circle cx="18" cy="7" r="3"></circle><circle cx="12" cy="18" r="3"></circle><path d="M8.5 9.5l2 5"></path><path d="M15.5 9.5l-2 5"></path><path d="M9 7h6"></path>',
-    cloud: '<path d="M17.5 19H8a6 6 0 1 1 1.1-11.9A7 7 0 0 1 22 11.5 4.5 4.5 0 0 1 17.5 19z"></path>',
-    bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path>',
-    plug: '<path d="M12 22v-5"></path><path d="M9 8V2"></path><path d="M15 8V2"></path><path d="M6 8h12v4a6 6 0 0 1-12 0V8z"></path>',
-    cpu: '<rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M4 10h3"></path><path d="M4 14h3"></path><path d="M17 10h3"></path><path d="M17 14h3"></path><path d="M10 4v3"></path><path d="M14 4v3"></path><path d="M10 17v3"></path><path d="M14 17v3"></path>',
-  };
-  return h("span", { class: "toolkit-icon", html: `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.code}</svg>` });
-};
 
 /* ============ POPULATE SECTIONS ============ */
 function populate() {
@@ -231,29 +216,68 @@ function populate() {
     const buttons = h("div", { class: "row-actions" },
       ...p.buttons.map(([label, type, href]) => {
         if (type === "muted") return h("span", { class: "btn btn-muted" }, label);
-        if (type === "case") {
-          return h("button", { class: "btn btn-primary", type: "button", "data-project": p.id }, label, " ->");
-        }
-        const attrs = { class: "btn btn-ghost" };
+        const attrs = { class: type === "case" ? "btn btn-primary" : "btn btn-ghost" };
         if (href) { attrs.href = href; attrs.target = "_blank"; attrs.rel = "noreferrer"; }
         return h("a", attrs, label, " ↗");
       })
     );
 
+    // mini svg
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 340 60");
+    svg.setAttribute("class", "mini-arch");
+    p.arch.forEach((n, k) => {
+      const x = (k * 340) / p.arch.length + 20;
+      const y = 30;
+      if (k > 0) {
+        const px = ((k - 1) * 340) / p.arch.length + 20 + 42;
+        const line = document.createElementNS(svgNS, "line");
+        line.setAttribute("x1", px); line.setAttribute("y1", y);
+        line.setAttribute("x2", x - 4); line.setAttribute("y2", y);
+        line.setAttribute("class", "link");
+        svg.appendChild(line);
+      }
+      const rect = document.createElementNS(svgNS, "rect");
+      rect.setAttribute("x", x - 4); rect.setAttribute("y", y - 12);
+      rect.setAttribute("width", 46); rect.setAttribute("height", 24);
+      rect.setAttribute("rx", 4);
+      rect.setAttribute("class", "node");
+      svg.appendChild(rect);
+      const text = document.createElementNS(svgNS, "text");
+      text.setAttribute("x", x + 19); text.setAttribute("y", y + 4);
+      text.setAttribute("text-anchor", "middle");
+      text.setAttribute("class", "label");
+      text.textContent = n.length > 6 ? n.slice(0, 6) : n;
+      svg.appendChild(text);
+    });
+
+    const archPanel = h("div", { class: "arch-panel" },
+      h("div", { class: "eyebrow" }, "Architecture"),
+      svg,
+      h("div", { class: "metrics" },
+        ...p.metrics.map(([k, v]) =>
+          h("div", { class: "metric" },
+            h("span", { class: "k" }, k),
+            h("span", { class: "v" }, v)
+          )
+        )
+      )
+    );
+
     const row = h("div", { class: "work-row reveal", id: `project-${p.id}` },
-      h("div", { class: "work-summary" },
-        h("div", { class: "work-title-block" },
-        h("div", { class: "eyebrow" }, `W${String(i + 1).padStart(2, "0")} - ${p.status.toUpperCase()}`),
+      h("div", {},
+        h("div", { class: "eyebrow" }, `W${String(i + 1).padStart(2, "0")} — ${p.status.toUpperCase()}`),
         h("h3", {}, p.title),
         h("div", { class: "cat" }, p.cat),
         h("div", { class: "chip-row", style: "margin-top:16px" }, ...p.stack.map(chip))
-        ),
-        h("div", { class: "work-detail" },
+      ),
+      h("div", {},
         h("p", { class: "desc" }, p.desc),
         h("ul", { class: "dot-list" }, ...p.highlights.map((t) => h("li", {}, t))),
         buttons
-        )
-      )
+      ),
+      archPanel
     );
     work.appendChild(row);
   });
@@ -320,10 +344,10 @@ function populate() {
 
   // Toolkit
   const tk = document.getElementById("toolkit-list");
-  SKILLS.forEach(([iconName, title, items]) => {
+  SKILLS.forEach(([title, items]) => {
     tk.appendChild(
       h("div", { class: "toolkit-row reveal" },
-        h("div", { class: "toolkit-title" }, icon(iconName), h("span", {}, title)),
+        h("div", { class: "title" }, title),
         h("div", { class: "chip-row" }, ...items.map(chip))
       )
     );
@@ -377,80 +401,6 @@ function populate() {
         )
       )
     );
-  });
-}
-
-function architectureComponent(project) {
-  return h("div", { class: "case-architecture" },
-    h("div", { class: "eyebrow" }, "Architecture"),
-    h("div", { class: "case-flow" },
-      ...project.arch.map((node, index) => [
-        h("div", { class: "case-node" }, node),
-        index < project.arch.length - 1 ? h("div", { class: "case-edge" }) : null
-      ])
-    )
-  );
-}
-
-function statisticsComponent(project) {
-  return h("div", { class: "case-statistics" },
-    h("div", { class: "eyebrow" }, "Statistics"),
-    h("div", { class: "case-stat-grid" },
-      ...project.metrics.map(([value, label]) =>
-        h("div", { class: "case-stat" },
-          h("span", { class: "case-stat-value" }, value),
-          h("span", { class: "case-stat-label" }, label)
-        )
-      )
-    )
-  );
-}
-
-function openCaseStudy(id) {
-  const project = PROJECTS.find((p) => p.id === id);
-  const modal = document.getElementById("case-modal");
-  const body = document.getElementById("case-body");
-  if (!project || !modal || !body) return;
-
-  body.replaceChildren(
-    h("div", { class: "eyebrow accent" }, project.status),
-    h("h3", { id: "case-title" }, project.title),
-    h("p", {}, project.desc),
-    architectureComponent(project),
-    statisticsComponent(project),
-    h("div", { class: "case-grid" },
-      h("div", { class: "case-section" },
-        h("div", { class: "eyebrow" }, "Stack"),
-        h("div", { class: "chip-row" }, ...project.stack.map(chip))
-      ),
-      h("div", { class: "case-section" },
-        h("div", { class: "eyebrow" }, "What it shows"),
-        h("ul", { class: "dot-list" }, ...project.highlights.map((item) => h("li", {}, item)))
-      )
-    )
-  );
-
-  modal.hidden = false;
-  document.body.style.overflow = "hidden";
-}
-
-function closeCaseStudy() {
-  const modal = document.getElementById("case-modal");
-  if (!modal) return;
-  modal.hidden = true;
-  document.body.style.overflow = "";
-}
-
-function initCaseStudies() {
-  document.addEventListener("click", (event) => {
-    const trigger = event.target.closest("[data-project]");
-    if (trigger) openCaseStudy(trigger.getAttribute("data-project"));
-    if (event.target.id === "case-modal") closeCaseStudy();
-  });
-
-  document.getElementById("case-close")?.addEventListener("click", closeCaseStudy);
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeCaseStudy();
   });
 }
 
@@ -681,6 +631,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initActiveNav();
   initPipelineTokens();
   initEmailCopy();
-  initCaseStudies();
   initHeroScene();
 });
