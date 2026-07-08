@@ -39,6 +39,7 @@ button{font:inherit}
 .nav-links a:hover{color:#fff}
 .nav-cta{display:flex;gap:10px;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Manrope';font-weight:700;font-size:14.5px;padding:11px 20px;border-radius:11px;cursor:pointer;border:1px solid transparent;transition:transform .18s,box-shadow .25s,background .2s,border-color .2s;white-space:nowrap}
+.btn-icon{width:17px;height:17px;fill:currentColor;flex:0 0 auto}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:linear-gradient(135deg,oklch(0.8 0.13 200),oklch(0.68 0.16 262));color:#051018;box-shadow:0 10px 30px -10px oklch(0.7 0.15 262/.8)}
 .btn-ghost{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13);color:#e9edf6}

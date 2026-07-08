@@ -45,7 +45,7 @@ const projects = [
     desc:'A real-time messaging application built with MERN and Socket.io for instant communication, live chat sessions, and responsive user interactions.',
     tags:['MongoDB','Express','React','Node.js','Socket.io'],
     features:['Real-time WebSocket messaging','Chat rooms and direct messaging','Authentication-ready structure'],
-    secondary:'GitHub Repo',
+    secondary:'GitHub',
     link:'https://github.com/sram533/realmtalk',
     pattern:'React frontend -> Node/Express API -> Socket.io event layer -> MongoDB',
     problem:'Request/response HTTP falls short for live conversation. The app needed bidirectional, low-latency messaging with presence and session handling.',
@@ -157,6 +157,10 @@ function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 }
 
+function githubIcon() {
+  return `<svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.42 11.42 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.61-5.48 5.91.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>`;
+}
+
 function mockMarkup(type) {
   if (type === 'fitness') return `<div class="fx jb ac" style="margin-bottom:12px"><div class="mk-bar" style="width:90px"></div><div class="chip">AI Coach</div></div><div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px"><div class="mk-tile"><div class="mk-kpi acc-cyan">48</div><div class="mk-kl">workouts</div></div><div class="mk-tile"><div class="mk-kpi acc-emerald">1.8k</div><div class="mk-kl">kcal/day</div></div><div class="mk-tile"><div class="mk-kpi acc-purple">92%</div><div class="mk-kl">goal</div></div></div><div class="mk-tile"><div class="bars"><i style="height:40%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:75%"></i><i style="height:66%"></i><i style="height:88%"></i><i style="height:80%"></i></div></div>`;
   if (type === 'health') return `<div class="fx jb ac" style="margin-bottom:12px"><div class="mk-bar" style="width:80px"></div><span class="chip">API online</span></div><div class="grid" style="grid-template-columns:1fr 1fr;gap:8px"><div class="mk-tile"><div class="mk-kpi acc-cyan">1,204</div><div class="mk-kl">members</div></div><div class="mk-tile"><div class="mk-kpi acc-emerald">318</div><div class="mk-kl">active claims</div></div><div class="mk-tile"><div class="mk-kpi acc-purple">96</div><div class="mk-kl">policies</div></div><div class="mk-tile"><div class="mk-kpi acc-blue">4</div><div class="mk-kl">API services</div></div></div>`;
@@ -178,7 +182,7 @@ function render() {
         <p class="proj-desc">${escapeHtml(p.desc)}</p>
         <div class="chiprow" style="margin-top:14px">${p.tags.map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('')}</div>
         <ul class="feat-list">${p.features.map(f => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
-        <div class="proj-foot"><button class="btn btn-primary btn-sm" data-project="${p.id}">Case Study</button>${p.link ? `<a class="btn btn-ghost btn-sm" href="${escapeHtml(p.link)}" target="_blank" rel="noopener">${escapeHtml(p.secondary)}</a>` : `<span class="btn btn-ghost btn-sm">${escapeHtml(p.secondary)}</span>`}</div>
+        <div class="proj-foot"><button class="btn btn-primary btn-sm" data-project="${p.id}">Case Study</button>${p.link ? `<a class="btn btn-ghost btn-sm" href="${escapeHtml(p.link)}" target="_blank" rel="noopener">${p.link.includes('github.com') ? githubIcon() : ''}<span>${escapeHtml(p.secondary)}</span></a>` : `<span class="btn btn-ghost btn-sm">${escapeHtml(p.secondary)}</span>`}</div>
       </div>
     </article>`).join('');
 
