@@ -71,21 +71,6 @@ const projects = [
     future:['Broader test automation and coverage gates.','More reusable middleware components.']
   },
   {
-    id:'poke', title:'Pokedex React App', category:'Frontend - API Integration', status:'Completed', statusClass:'st-done', mock:'poke',
-    desc:'A React Pokedex that consumes external Pokemon data and presents it through a clean, interactive UI.',
-    tags:['React','JavaScript','REST API','CSS'],
-    features:['API data fetching with search and filtering','Detail cards and clean component structure','Responsive frontend design'],
-    secondary:'Demo Coming Soon',
-    pattern:'React UI -> Fetch / data layer -> PokeAPI -> UI cards',
-    problem:'A focused exercise in consuming a public REST API and rendering it through a componentized, responsive interface.',
-    built:['A React app that fetches and paginates data from the PokeAPI.','Search, filtering, and detail cards with a clean component hierarchy.','A responsive layout that works across screen sizes.'],
-    decisions:['Isolate API access in a dedicated data layer.','Build small reusable components.','Manage loading and error states explicitly.'],
-    prodNotes:['Loading states','Error states','Debounced search','Reusable components'],
-    challenges:['Handling asynchronous data fetching gracefully.','Structuring reusable components around API-driven data.'],
-    learned:['Practical React state management and API integration patterns.','Building reusable component structures.'],
-    future:['Favorites, caching, and offline support.','Richer detail views.']
-  },
-  {
     id:'hpc', title:'High Performance Computing Coursework', category:'Systems - Parallel Computing - C++', status:'Academic Project', statusClass:'st-acad', mock:'hpc',
     desc:'Parallel computing projects using OpenMP, MPI, Monte Carlo simulations, lattice Boltzmann methods, and heat diffusion.',
     tags:['C++','OpenMP','MPI','PBS','Linux','HPC'],
@@ -158,7 +143,13 @@ const patterns = [
 ];
 
 const certs = [
-  ['SF','Salesforce Administrator','Certified'],['PD','Platform Developer I','Certified'],['AB','Salesforce App Builder','Certified'],['AP','Deloitte Applause Award','Recognition'],['GH','Green Hoodie Nomination','Deloitte'],['200k','200k+ Trailhead Points','Salesforce'],['RL','Published Research Paper','Deep RL - Robotics']
+  ['SF','Salesforce Administrator','Certified','https://drive.google.com/file/d/1TrOwrxZ69neHINn-I0ksNP2Or67zInAF/view?usp=drive_link'],
+  ['PD','Platform Developer I','Certified','https://drive.google.com/file/d/1tYXBoxzLSEjvpVHcUG7SYiXjfCc9yeC5/view?usp=drive_link'],
+  ['AB','Salesforce Platform App Builder','Certified','https://drive.google.com/file/d/1w2LeusrLXym1Iwu0k7axuJcVtF1u28KY/view?usp=drive_link'],
+  ['AP','Deloitte Applause Award','Recognition'],
+  ['GH','Green Hoodie Nomination','Deloitte'],
+  ['200k','200k+ Trailhead Points','Salesforce'],
+  ['RL','Published Research Paper','Deep RL - Robotics','https://www.neuroquantology.com/open-access/DEEP+REINFORCEMENT+LEARNING+FOR+ROBOT+PATH+PLANNING+WITH+PERIODICALLY+MOVING+OBSTACLES%253A+CURRENT+METHODS+AND+CHALLENGES_10234/']
 ];
 
 function escapeHtml(value) {
@@ -170,7 +161,6 @@ function mockMarkup(type) {
   if (type === 'health') return `<div class="fx jb ac" style="margin-bottom:12px"><div class="mk-bar" style="width:80px"></div><span class="chip">API online</span></div><div class="grid" style="grid-template-columns:1fr 1fr;gap:8px"><div class="mk-tile"><div class="mk-kpi acc-cyan">1,204</div><div class="mk-kl">members</div></div><div class="mk-tile"><div class="mk-kpi acc-emerald">318</div><div class="mk-kl">active claims</div></div><div class="mk-tile"><div class="mk-kpi acc-purple">96</div><div class="mk-kl">policies</div></div><div class="mk-tile"><div class="mk-kpi acc-blue">4</div><div class="mk-kl">API services</div></div></div>`;
   if (type === 'chat') return `<div class="fx gap8" style="height:100%"><div style="width:34%;border-right:1px solid rgba(255,255,255,.08);padding-right:8px"><div class="fx ac gap8" style="margin-bottom:8px"><span class="dot"></span><span style="font-size:10px;color:#c3cde0">3 online</span></div><div class="mk-bar" style="width:100%;margin-bottom:7px"></div><div class="mk-bar" style="width:70%;margin-bottom:7px"></div><div class="mk-bar" style="width:85%"></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;gap:8px;flex:1"><div class="msg msg-in">is the socket live?</div><div class="msg msg-out">yes, real-time now</div><div class="msg msg-in">nice work</div></div></div>`;
   if (type === 'sf') return `<div class="ws-panel" style="padding:11px 13px;margin-bottom:9px"><div class="term"><span class="p">$ </span><span class="c">sfdx</span> force:source:deploy<br><span class="p"># deploying 24 components...</span><br><span class="g">ok ApexClass</span> <span class="g">ok LWC</span> <span class="g">ok Flow</span><br><span class="y">Deploy: Succeeded</span> <span class="p">| tests 89% cov</span></div></div><div class="ws-badges"><span class="ws-b"><i style="background:oklch(0.78 0.13 162)"></i>Apex</span><span class="ws-b"><i style="background:oklch(0.7 0.15 262)"></i>LWC</span><span class="ws-b"><i style="background:oklch(0.82 0.14 90)"></i>Flow</span><span class="ws-b"><i style="background:oklch(0.78 0.13 162)"></i>REST/SOAP</span></div>`;
-  if (type === 'poke') return `<div class="fx jb ac" style="margin-bottom:10px"><div class="mk-bar" style="width:70px"></div><span class="chip">GET /pokemon</span></div><div class="grid" style="grid-template-columns:repeat(4,1fr);gap:8px"><div class="mk-tile tc"><div style="width:26px;height:26px;border-radius:50%;margin:0 auto 5px;background:oklch(0.78 0.13 162)"></div><div class="mk-kl">Bulbasaur</div></div><div class="mk-tile tc"><div style="width:26px;height:26px;border-radius:50%;margin:0 auto 5px;background:oklch(0.75 0.13 30)"></div><div class="mk-kl">Charmander</div></div><div class="mk-tile tc"><div style="width:26px;height:26px;border-radius:50%;margin:0 auto 5px;background:oklch(0.72 0.14 200)"></div><div class="mk-kl">Squirtle</div></div><div class="mk-tile tc"><div style="width:26px;height:26px;border-radius:50%;margin:0 auto 5px;background:oklch(0.8 0.14 90)"></div><div class="mk-kl">Pikachu</div></div></div>`;
   if (type === 'hpc') return `<div class="term"><span class="p">$ </span><span class="c">mpirun</span> -np 16 ./montecarlo_pi<br><span class="p"># estimating pi via Monte Carlo...</span><br><span class="g">pi ~= 3.14159</span> <span class="p">| err 2.1e-5</span><br><span class="y">speedup</span> 13.8x <span class="p">| eff 86%</span></div><div class="bars" style="margin-top:10px;height:34px"><i style="height:20%"></i><i style="height:38%"></i><i style="height:60%"></i><i style="height:78%"></i><i style="height:92%"></i><i style="height:100%"></i></div>`;
   return `<div class="tree"><div class="tnode on" style="left:44%;top:6px">R</div><div class="tedge" style="left:47%;top:20px;width:60px;transform:rotate(48deg)"></div><div class="tedge" style="left:47%;top:20px;width:60px;transform:rotate(132deg)"></div><div class="tnode on" style="left:20%;top:56px">A</div><div class="tnode" style="left:68%;top:56px">B</div><div class="tedge" style="left:23%;top:70px;width:44px;transform:rotate(50deg)"></div><div class="tedge" style="left:23%;top:70px;width:44px;transform:rotate(130deg)"></div><div class="tnode on" style="left:6%;top:106px">ok</div><div class="tnode" style="left:34%;top:106px">x</div><div class="tnode" style="left:56%;top:106px">.</div><div class="tnode on" style="left:80%;top:106px">ok</div><div class="chip" style="position:absolute;right:0;bottom:0">PPO - action mask</div></div>`;
 }
@@ -213,7 +203,7 @@ function render() {
 
   document.getElementById('education-section').innerHTML = `
     <div class="edu-card glass reveal">
-      <div class="fx jb" style="align-items:flex-start"><div><div class="edu-school">University of Illinois Chicago</div><div class="edu-deg">MS in Computer Science</div><div class="edu-meta">Expected Graduation - December 2025</div></div><span class="cert-ic">MS</span></div>
+      <div class="fx jb" style="align-items:flex-start"><div><div class="edu-school">University of Illinois Chicago</div><div class="edu-deg">MS in Computer Science</div><div class="edu-meta">Graduation - December 11, 2025</div></div><span class="cert-ic">MS</span></div>
       <div class="mb-label" style="margin-top:22px">Relevant coursework</div>
       <div class="course-grid">${['Algorithms','Advanced Algorithms','Computer Networks','Advanced Computer Networks','High Performance Computing','Algorithms in Computational Biology','Computer Systems Security','Database Management Systems'].map(c => `<span class="course">${c}</span>`).join('')}</div>
     </div>
@@ -222,7 +212,12 @@ function render() {
       <div class="glass" style="margin-top:22px;padding:18px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.03)"><span class="muted" style="font-size:13px;font-family:'JetBrains Mono'">CGPA</span><span class="stat-n grad-text2">8.61<span style="font-size:15px;color:#8390a8">/10</span></span></div>
     </div>`;
 
-  document.getElementById('certs-grid').innerHTML = certs.map(([badge,title,sub]) => `<div class="cert glass reveal"><div class="cert-ic">${escapeHtml(badge)}</div><div class="cert-t">${escapeHtml(title)}</div><div class="cert-s">${escapeHtml(sub)}</div></div>`).join('');
+  document.getElementById('certs-grid').innerHTML = certs.map(([badge,title,sub,link]) => {
+    const body = `<div class="cert-ic">${escapeHtml(badge)}</div><div class="cert-t">${escapeHtml(title)}</div><div class="cert-s">${escapeHtml(sub)}</div>`;
+    return link
+      ? `<a class="cert glass reveal" href="${escapeHtml(link)}" target="_blank" rel="noopener">${body}</a>`
+      : `<div class="cert glass reveal">${body}</div>`;
+  }).join('');
 }
 
 function openModal(id) {

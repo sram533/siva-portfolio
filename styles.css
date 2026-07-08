@@ -54,9 +54,33 @@ button{font:inherit}
 .hero-sub{margin-top:18px;font-size:16.5px;max-width:560px}
 .hero-tags{margin-top:18px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero-stats{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
 .stat-n{font-family:'Space Grotesk';font-weight:700;font-size:26px}
 .stat-l{font-size:12.5px;color:#8390a8;margin-top:2px}
+.hero-proof{position:relative;padding:24px;border-radius:20px;overflow:hidden}
+.hero-proof::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 10% 0%,oklch(0.78 0.13 200/.12),transparent 62%),radial-gradient(70% 55% at 100% 35%,oklch(0.72 0.15 300/.1),transparent 58%);pointer-events:none}
+.proof-top,.proof-identity,.proof-roles,.proof-grid,.proof-section,.proof-links{position:relative}
+.proof-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.proof-kicker{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:oklch(0.78 0.13 200)}
+.proof-status{display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:12px;color:#c3cde0;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1)}
+.proof-status .dot{width:7px;height:7px;box-shadow:0 0 0 3px oklch(0.78 0.13 162/.16)}
+.proof-identity{display:flex;align-items:center;gap:16px;margin-top:20px}
+.proof-avatar{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-family:'JetBrains Mono';font-size:20px;font-weight:700;color:#04121a;background:linear-gradient(135deg,oklch(0.82 0.13 200),oklch(0.7 0.15 262));box-shadow:0 16px 42px -18px oklch(0.7 0.15 262)}
+.proof-name{font-family:'Space Grotesk';font-size:23px;font-weight:700;line-height:1.1}
+.proof-meta{font-size:13.5px;color:#98a3ba;margin-top:4px}
+.proof-roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.proof-roles span{font-family:'JetBrains Mono';font-size:11px;color:#cbd5e7;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1)}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.proof-grid div{padding:14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.proof-grid strong{display:block;font-family:'Space Grotesk';font-size:24px;line-height:1;color:oklch(0.82 0.13 200)}
+.proof-grid span{display:block;margin-top:6px;font-size:12px;color:#8c98af}
+.proof-section{margin-top:20px;padding:18px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}
+.proof-label{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:oklch(0.78 0.13 162);margin-bottom:12px}
+.proof-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.proof-list li{display:flex;gap:10px;font-size:13.5px;color:#b8c2d6;line-height:1.45}
+.proof-list li::before{content:"";width:6px;height:6px;border-radius:2px;background:oklch(0.78 0.13 200);margin-top:7px;flex:0 0 auto;transform:rotate(45deg)}
+.proof-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.proof-links a{display:flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border-radius:10px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);font-weight:700;font-size:13px;color:#e9edf6;transition:background .2s,border-color .2s,transform .18s}
+.proof-links a:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
 .diagram{position:relative;padding:22px;border-radius:20px}
 .diag-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.07)}
 .diag-title{font-family:'JetBrains Mono';font-size:12px;color:#8390a8;letter-spacing:.05em}
@@ -226,9 +250,26 @@ button{font:inherit}
   .hero-sub,.sec-sub,.lead{font-size:15.5px}
   .body-copy{font-size:15px}
   .hero-cta{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
-  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px;margin-top:28px}
   .stat-n{font-size:23px}
   .stat-l{font-size:12px}
+  .hero-proof{padding:16px;border-radius:16px}
+  .proof-top{align-items:flex-start;gap:10px;padding-bottom:14px}
+  .proof-kicker{font-size:10.5px;letter-spacing:.12em}
+  .proof-status{font-size:10.5px;padding:5px 8px;white-space:nowrap}
+  .proof-identity{gap:12px;margin-top:16px}
+  .proof-avatar{width:48px;height:48px;border-radius:14px;font-size:17px}
+  .proof-name{font-size:20px}
+  .proof-meta{font-size:12.5px;line-height:1.4}
+  .proof-roles{gap:7px;margin-top:16px}
+  .proof-roles span{font-size:10.5px;padding:5px 8px}
+  .proof-grid{gap:10px;margin-top:16px}
+  .proof-grid div{padding:12px}
+  .proof-grid strong{font-size:21px}
+  .proof-grid span{font-size:11.5px}
+  .proof-section{margin-top:16px;padding:14px;border-radius:12px}
+  .proof-list li{font-size:13px}
+  .proof-links{grid-template-columns:1fr;gap:8px;margin-top:14px}
+  .proof-links a{min-height:40px;font-size:13px}
   .diagram{padding:14px;border-radius:16px}
   .diag-head{align-items:flex-start;gap:12px;margin-bottom:12px;padding-bottom:12px}
   .diag-title{font-size:10.5px;overflow-wrap:anywhere}
@@ -305,7 +346,6 @@ button{font:inherit}
 @media(max-width:390px){
   .wrap{padding:0 14px}
   .hero-name{font-size:32px}
-  .hero-stats{grid-template-columns:1fr}
   .diag-head .tdots{display:none}
   .mock{height:150px}
   .cert-grid{gap:12px}
