@@ -45,7 +45,8 @@ const projects = [
     desc:'A real-time messaging application built with MERN and Socket.io for instant communication, live chat sessions, and responsive user interactions.',
     tags:['MongoDB','Express','React','Node.js','Socket.io'],
     features:['Real-time WebSocket messaging','Chat rooms and direct messaging','Authentication-ready structure'],
-    secondary:'Demo Coming Soon',
+    secondary:'GitHub Repo',
+    link:'https://github.com/sram533/realmtalk',
     pattern:'React frontend -> Node/Express API -> Socket.io event layer -> MongoDB',
     problem:'Request/response HTTP falls short for live conversation. The app needed bidirectional, low-latency messaging with presence and session handling.',
     built:['A MERN-stack app with Socket.io for real-time bidirectional messaging.','Chat rooms and direct messaging with live online-status indicators.','A responsive React UI with an authentication-ready session structure.'],
@@ -177,7 +178,7 @@ function render() {
         <p class="proj-desc">${escapeHtml(p.desc)}</p>
         <div class="chiprow" style="margin-top:14px">${p.tags.map(t => `<span class="chip">${escapeHtml(t)}</span>`).join('')}</div>
         <ul class="feat-list">${p.features.map(f => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
-        <div class="proj-foot"><button class="btn btn-primary btn-sm" data-project="${p.id}">Case Study</button><span class="btn btn-ghost btn-sm">${escapeHtml(p.secondary)}</span></div>
+        <div class="proj-foot"><button class="btn btn-primary btn-sm" data-project="${p.id}">Case Study</button>${p.link ? `<a class="btn btn-ghost btn-sm" href="${escapeHtml(p.link)}" target="_blank" rel="noopener">${escapeHtml(p.secondary)}</a>` : `<span class="btn btn-ghost btn-sm">${escapeHtml(p.secondary)}</span>`}</div>
       </div>
     </article>`).join('');
 
